@@ -57,9 +57,6 @@ public static class Library
     
     public static string? RemoveInstanceIdFromQueryString_Fowler(string query)
     {
-        if (query == string.Empty)
-            return null;
-        
         Span<char> chars = query.Length < 256 ? stackalloc char[256] : new char[query.Length];
         var len = 0;
 

@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>RemoveInstanceIdFromQueryString.Benchmarks-20230714-140550</title>
+<title>RemoveInstanceIdFromQueryString.Benchmarks-20230714-141340</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -24,12 +24,12 @@ AMD Ryzen 9 7950X3D, 1 CPU, 16 logical and 8 physical cores
 <table>
 <thead><tr><th>Method</th><th>         Query</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>Old</td><td>insta(...)=1234 [21]</td><td>115.19 ns</td><td>2.157 ns</td><td>2.018 ns</td><td>0.0002</td><td>408 B</td>
-</tr><tr><td>New</td><td>insta(...)=1234 [21]</td><td>20.85 ns</td><td>0.291 ns</td><td>0.273 ns</td><td>0.0000</td><td>40 B</td>
-</tr><tr><td>Fowler</td><td>insta(...)=1234 [21]</td><td>84.42 ns</td><td>0.609 ns</td><td>0.540 ns</td><td>-</td><td>40 B</td>
-</tr><tr><td>Old</td><td>test=(...)=1234 [25]</td><td>118.30 ns</td><td>1.674 ns</td><td>1.566 ns</td><td>0.0002</td><td>448 B</td>
-</tr><tr><td>New</td><td>test=(...)=1234 [25]</td><td>21.93 ns</td><td>0.479 ns</td><td>0.492 ns</td><td>0.0000</td><td>40 B</td>
-</tr><tr><td>Fowler</td><td>test=(...)=1234 [25]</td><td>80.82 ns</td><td>1.627 ns</td><td>1.741 ns</td><td>-</td><td>40 B</td>
+</thead><tbody><tr><td>Old</td><td>insta(...)=1234 [21]</td><td>128.94 ns</td><td>1.603 ns</td><td>1.339 ns</td><td>0.0002</td><td>408 B</td>
+</tr><tr><td>New</td><td>insta(...)=1234 [21]</td><td>20.36 ns</td><td>0.141 ns</td><td>0.117 ns</td><td>0.0000</td><td>40 B</td>
+</tr><tr><td>Fowler</td><td>insta(...)=1234 [21]</td><td>81.75 ns</td><td>0.233 ns</td><td>0.182 ns</td><td>-</td><td>40 B</td>
+</tr><tr><td>Old</td><td>test=(...)=1234 [25]</td><td>116.70 ns</td><td>1.472 ns</td><td>1.377 ns</td><td>0.0002</td><td>448 B</td>
+</tr><tr><td>New</td><td>test=(...)=1234 [25]</td><td>21.20 ns</td><td>0.095 ns</td><td>0.089 ns</td><td>0.0000</td><td>40 B</td>
+</tr><tr><td>Fowler</td><td>test=(...)=1234 [25]</td><td>79.42 ns</td><td>0.356 ns</td><td>0.316 ns</td><td>-</td><td>40 B</td>
 </tr></tbody></table>
 </body>
 </html>
