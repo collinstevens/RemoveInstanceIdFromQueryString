@@ -1,4 +1,6 @@
-﻿namespace RemoveInstanceIdFromQueryString;
+﻿using Microsoft.AspNetCore.WebUtilities;
+
+namespace RemoveInstanceIdFromQueryString;
 
 public static class Library
 {
@@ -51,5 +53,28 @@ public static class Library
         var right = span[end..];
         var result = string.Concat(left, right);
         return result;
+    }
+    
+    public static string? RemoveInstanceIdFromQueryString_Fowler(string query)
+    {
+        if (query == string.Empty)
+            return null;
+        
+        Span<char> chars = query.Length < 256 ? stackalloc char[256] : new char[query.Length];
+        var len = 0;
+
+        foreach (var pair in new QueryStringEnumerable(query))
+        {
+            if (pair.DecodeName().Span.Equals("instanceId", StringComparison.OrdinalIgnoreCase))
+                continue;
+
+            if (len > 0)
+                chars[len++] = '&';
+
+            chars[len..].TryWrite($"{pair.EncodedName.Span}={pair.EncodedValue.Span}", out var written);
+            len += written;
+        }
+
+        return new string(chars[..len]);
     }
 }

@@ -19,4 +19,10 @@ public class Benchmarks
     {
         return Library.RemoveInstanceIdFromQueryString_New(Query);
     }
+    
+    [Benchmark]
+    public string? Fowler()
+    {
+        return Library.RemoveInstanceIdFromQueryString_Fowler(Query);
+    }
 }
